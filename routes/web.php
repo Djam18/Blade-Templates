@@ -44,3 +44,21 @@ Route::get('if',function(){
 Route::get('unless-directive',function (){
     return view('unless-directive');
 });
+
+//The Loop Variable
+Route::get('the-loop-variable',function (){
+    $users = User::all();
+    return view('the-loop-variable',['users' => $users]);
+});
+
+Route::get('conditional-classes',function(){
+    return view('conditional-classes');
+});
+
+Route::get('including-subviews',function(){
+    return view('including-subviews');
+});
+
+Route::get('components-example',function(){
+    return view('components-example');
+});
